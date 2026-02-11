@@ -138,6 +138,13 @@ df |>
 ## Exercise 1: Reading TSV Files
 
 * A TSV file, `places_in_princeton.tsv`, uses a tab character as a delimiter between values. Your task is to read this file into R using an appropriate reading function.
+```{r}
+data_readr <- read_tsv("places_in_princeton.tsv")
+
+# Inspecting the first few rows of the data head(data_base_r)
+head(data_readr)
+
+```
     
 ## Exercise 2. Regex to English
 

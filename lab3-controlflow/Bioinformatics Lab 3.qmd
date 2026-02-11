@@ -26,7 +26,10 @@ Control flows in R determine the sequence in which the instructions are executed
 
 In R, the basic conditional statements are `if`, `else`, and `else if`. 
 
-```{r}
+```{r for classroom}
+x <-runif(1, 0, 10)
+
+
 set.seed(42) # This ensures that the random number generator will produce the same results each time the script is run
 x <- runif(1, 0, 10)
 
@@ -121,8 +124,10 @@ Consider a vector containing the values: 91, 77, 68, 65, 89, 72, 85, 90, 80.
 
 **Tip**: A vector is a way of storing data, in this case, ordered integers:
 
-```{r}
+```{r for grades}
 grades <- c(91, 77, 68, 65, 89, 72, 85, 90, 80)
+grades[1]
+grade_tags
 ```
 
 Write a conditional script that:
@@ -134,14 +139,35 @@ Write a conditional script that:
 Store the result in a new variable called grade_tags. Ensure the order in grade_tags corresponds to the order of grades in the grades vector, and print the result.
 
 
+
 ### 2. For
 
 Create a sequence of numbers from 3 to 15 (included). Using a for loop, compute the cumulative product of these numbers and print the results.
+```{r}
+list = c(3:15)
+product = 1
+
+for(i in list){
+  product = product * i
+}
+print(product)
+```
 
 
 ### 3. While
 
 Starting with a number 50, decrease it by 5% in every iteration using a while loop. Continue the iterations until the number goes below 20. Return and print the number of iterations it took.
+```{r}
+n<-50
+counter<-50
+iteration=0
+while(counter>=20){
+counter<-counter*0.95
+iteration=iteration+1
+print(iteration)
+print(counter) 
+}
+```
 
 
 ### 4. Functions with conditionals and loops
@@ -151,6 +177,7 @@ Write a function named series_sum that accepts two arguments: a start value 's' 
 **Tip**: The modulo operator (`%%` in R) returns the remainder of the division of two numbers.
  
 ```{r}
+series_sum
 # as in R
 5%%2
 ```
